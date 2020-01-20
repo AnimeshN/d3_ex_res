@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./d3.v5.15.js"></script>
+</head>
+<body>
+   <svg width='500px' height='500px'></svg>
+</body>
+<script>
+    arr = [1,2,3,4];
+d3.select('body').selectAll('div')
+.data(arr).enter().append('div').html('hello')
+
+
+d3.select('svg').append('circle').attr('cx',50).attr('cy',50).attr('r',25).style('fill','red')
+.transition().duration(5000).attr('cx',500).transition().delay(2000).duration(1000).attr('cx',50)
+</script>
+</html>
